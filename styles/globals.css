@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+.text-gradient {
+  background: -webkit-linear-gradient(
+    left,
+    #c93d45,
+    #c93d45,
+    #fccc00,
+    #fccc00,
+    #18a488,
+    #18a488,
+    #008ad0,
+    #008ad0
+  );
+  background: -o-linear-gradient(
+    right,
+    #c93d45,
+    #c93d45,
+    #fccc00,
+    #fccc00,
+    #18a488,
+    #18a488,
+    #008ad0,
+    #008ad0
+  );
+  background: -moz-linear-gradient(
+    right,
+    #c93d45,
+    #c93d45,
+    #fccc00,
+    #fccc00,
+    #18a488,
+    #18a488,
+    #008ad0,
+    #008ad0
+  );
+  background: linear-gradient(
+    to right,
+    #c93d45,
+    #c93d45,
+    #fccc00,
+    #fccc00,
+    #18a488,
+    #18a488,
+    #008ad0,
+    #008ad0
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+  }
+
+  @font-face {
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url('/fonts/fredoka-one.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* Write your own custom base styles here */
+  h1 {
+    @apply text-3xl font-bold md:text-5xl font-primary;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl font-primary;
+  }
+
+  h3 {
+    @apply text-xl font-bold md:text-3xl font-primary;
+  }
+
+  h4 {
+    @apply text-lg font-bold font-primary;
+  }
+
+  body {
+    @apply text-sm font-primary md:text-base;
+  }
+
+  .layout {
+    /* 750px */
+    /* max-width: 43.75rem; */
+
+    /* 1280px */
+    max-width: 1232px;
+    @apply w-11/12 mx-auto;
+  }
+}
+
+@layer utilities {
+  .min-h-screen-header {
+    @apply md:min-h-[calc(100vh-96px)] min-h-[calc(100vh-88px)];
+  }
+
+  .aspect-125::after {
+    padding-bottom: 125%;
+  }
+}
+
+.yt-lite::before {
+  content: none !important;
+}
+
+@media (max-width: 480px) {
+  .slick-prev::before,
+  .slick-next::before {
+    content: none;
+    display: none;
+  }
+}

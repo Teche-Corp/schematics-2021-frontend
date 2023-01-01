@@ -1,0 +1,46 @@
+{
+  "name": "nextjs-tailwind-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.5",
+    "@tailwindcss/aspect-ratio": "^0.2.2",
+    "@tailwindcss/forms": "^0.3.4",
+    "autoprefixer": "^10.3.7",
+    "axios": "^0.22.0",
+    "date-fns": "^2.25.0",
+    "next": "^11.1.2",
+    "postcss": "^8.3.11",
+    "react": "17.0.1",
+    "react-cookie": "^4.1.1",
+    "react-countdown": "^2.3.2",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.3.1",
+    "react-lite-youtube-embed": "^2.1.0",
+    "react-slick": "^0.28.1",
+    "react-table": "^7.7.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^2.2.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.2.4",
+    "next-sitemap": "^1.6.192",
+    "prettier": "^2.4.1"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,html,css,json}": [
+      "yarn prettier --write"
+    ]
+  }
+}
